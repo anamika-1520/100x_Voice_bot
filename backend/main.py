@@ -17,7 +17,7 @@ try:
         temperature=0.6
     )
 except Exception as e:
-    print("❌ Groq init error:", e)
+    print(" Groq init error:", e)
     raise e
 
 
@@ -47,6 +47,7 @@ Answer:
         return {"answer": answer}
 
     except Exception as e:
-        print("❌ ERROR in /ask")
+        print("ERROR in /ask")
         traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
+
