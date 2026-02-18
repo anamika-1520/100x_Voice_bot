@@ -41,8 +41,8 @@ ctx = webrtc_streamer(
             {"urls": ["stun:stun.l.google.com:19302"]},
             {
                 "urls": "turn:global.turn.twilio.com:3478?transport=udp",
-                "username": os.getenv("7204ee8f1afc6f319d1b7d0d99788d10bedf56d6788edd89015a1f41c1d958f9"),
-                "credential": os.getenv("rgZQNCo3r38biEOIrK9KOTJv/so0sSTrYmiGVwfZia0="),
+                "username": os.getenv("TWILIO_USERNAME"),
+                "credential": os.getenv("TWILIO_PASSWORD"),
             },
         ]
     },
@@ -117,3 +117,4 @@ if ctx.audio_processor:
 
 
 ### i             
+
