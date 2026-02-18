@@ -36,6 +36,16 @@ ctx = webrtc_streamer(
     mode=WebRtcMode.SENDONLY,
     audio_processor_factory=AudioProcessor,
     media_stream_constraints={"audio": True, "video": False},
+    rtc_configuration={
+        "iceServers": [
+            {"urls": ["stun:stun.l.google.com:19302"]},
+            {
+                "urls": "turn:global.turn.twilio.com:3478?transport=udp",
+                "username": os.getenv("7204ee8f1afc6f319d1b7d0d99788d10bedf56d6788edd89015a1f41c1d958f9"),
+                "credential": os.getenv("rgZQNCo3r38biEOIrK9KOTJv/so0sSTrYmiGVwfZia0="),
+            },
+        ]
+    },
 )
 
 # ---------------- UI CONTROLS ----------------
@@ -104,5 +114,6 @@ if ctx.audio_processor:
             tts.save("reply.mp3")
             st.audio("reply.mp3")
 ### this is the end of the code ###
+
 
 ### i             
